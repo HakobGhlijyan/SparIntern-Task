@@ -13,9 +13,9 @@ struct ProductListView: View {
     var body: some View {
         VStack {
             if viewModel.gridOrListView {
-                GridView()
+                GridView(enumCardVerticalState: .verticalOnlyPrice)
             } else {
-                ListView()
+                ListView(enumCardVerticalState: .verticalOnlyPrice)
             }
         }
         .toolbar {

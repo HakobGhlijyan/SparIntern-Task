@@ -17,22 +17,24 @@ enum EnumCardImageSizeSection: CGFloat {
 struct CardImageSection: View {
     var product: Product
     var enumCardImageSizeSection: EnumCardImageSizeSection
+    var activeCardDiscount: Bool = true
     
     var body: some View {
         Image(product.imageName)
             .resizable()
             .frame(width: enumCardImageSizeSection.rawValue, height: enumCardImageSizeSection.rawValue)
             .overlay(alignment: .topLeading, content: {
-                Text(product.activeCardDiscount ? "Удар по ценам" : "Новинки")
-                    .font(.system(size: 10, weight: .regular, design: .default))
-                    .foregroundStyle(.white)
-                    .padding(.init(top: 2, leading: 12, bottom: 4, trailing: 6))
-                    .background(
-                        Rectangle()
-                            .foregroundColor(product.activeCardDiscount ? Color.price : Color.new)
-                            .clipShape(RoundedCornerShape(radius: 10, corners: [.bottomRight, .topLeft, .topRight]))
-                    )
-                
+                if activeCardDiscount {
+                    Text(product.activeCardDiscount ? "Удар по ценам" : "Новинки")
+                        .font(.system(size: 10, weight: .regular, design: .default))
+                        .foregroundStyle(.white)
+                        .padding(.init(top: 2, leading: 12, bottom: 4, trailing: 6))
+                        .background(
+                            Rectangle()
+                                .foregroundColor(product.activeCardDiscount ? Color.price : Color.new)
+                                .clipShape(RoundedCornerShape(radius: 10, corners: [.bottomRight, .topLeft, .topRight]))
+                        )
+                }
             })
             .overlay(alignment: .bottomLeading, content: {
                 if !product.activeCardDiscount {
@@ -64,22 +66,89 @@ struct CardImageSection: View {
     ZStack {
         Color.black.opacity(0.1).ignoresSafeArea()
         
-        VStack {
-            CardImageSection(
-                product: Product(name: "сыр Ламбер 500/0 230г",
-                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
-                enumCardImageSizeSection: .big
-            )
-            CardImageSection(
-                product: Product(name: "сыр Ламбер 500/0 230г",
-                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
-                enumCardImageSizeSection: .small
-            )
-            CardImageSection(
-                product: Product(name: "сыр Ламбер 500/0 230г",
-                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
-                enumCardImageSizeSection: .little
-            )
+        ScrollView {
+            VStack {
+                CardImageSection(
+                    product: Product(
+                        name: "сыр Ламбер 500/0 230г",
+                        price: 90.90,
+                        imageName: "Image-0",
+                        rating: 4.1,
+                        isFavorite: false,
+                        activeCardDiscount: true,
+                        cardStateAddingActive: true
+                    ),
+                    enumCardImageSizeSection: .big,
+                    activeCardDiscount: true
+                )
+                CardImageSection(
+                    product: Product(
+                        name: "сыр Ламбер 500/0 230г",
+                        price: 90.90,
+                        imageName: "Image-0",
+                        rating: 4.1,
+                        isFavorite: false,
+                        activeCardDiscount: true,
+                        cardStateAddingActive: true
+                    ),
+                    enumCardImageSizeSection: .small,
+                    activeCardDiscount: false
+                )
+                CardImageSection(
+                    product: Product(
+                        name: "сыр Ламбер 500/0 230г",
+                        price: 90.90,
+                        imageName: "Image-0",
+                        rating: 4.1,
+                        isFavorite: false,
+                        activeCardDiscount: true,
+                        cardStateAddingActive: true
+                    ),
+                    enumCardImageSizeSection: .little,
+                    activeCardDiscount: true
+                )
+            }
+            VStack {
+                CardImageSection(
+                    product: Product(
+                        name: "сыр Ламбер 500/0 230г",
+                        price: 90.90,
+                        imageName: "Image-0",
+                        rating: 4.1,
+                        isFavorite: false,
+                        activeCardDiscount: false,
+                        cardStateAddingActive: true
+                    ),
+                    enumCardImageSizeSection: .big,
+                    activeCardDiscount: true
+                )
+                CardImageSection(
+                    product: Product(
+                        name: "сыр Ламбер 500/0 230г",
+                        price: 90.90,
+                        imageName: "Image-0",
+                        rating: 4.1,
+                        isFavorite: false,
+                        activeCardDiscount: false,
+                        cardStateAddingActive: true
+                    ),
+                    enumCardImageSizeSection: .small,
+                    activeCardDiscount: false
+                )
+                CardImageSection(
+                    product: Product(
+                        name: "сыр Ламбер 500/0 230г",
+                        price: 90.90,
+                        imageName: "Image-0",
+                        rating: 4.1,
+                        isFavorite: false,
+                        activeCardDiscount: false,
+                        cardStateAddingActive: true
+                    ),
+                    enumCardImageSizeSection: .little,
+                    activeCardDiscount: true
+                )
+            }
         }
     }
 }

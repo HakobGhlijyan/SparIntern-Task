@@ -7,7 +7,17 @@
 
 import SwiftUI
 
-enum EnumCardButtonNoActive {
+enum EnumPriceCardState {
     case long
     case small
+}
+
+enum EnumProductCard {
+    case verticalCard
+    case horizontalCard
+}
+
+enum EnumCardVerticalState {
+    case verticalOnlyPrice
+    case verticalChangeProduct
 }

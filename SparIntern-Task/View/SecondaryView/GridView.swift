@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GridView: View {
     @EnvironmentObject var viewModel: ProductViewModel
-
+    var enumCardVerticalState: EnumCardVerticalState
+    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -23,7 +24,8 @@ struct GridView: View {
                         product: product,
                         enumProductCard: .verticalCard,
                         actionListEnable: true,
-                        enumCardImageSizeSection: .big
+                        enumCardImageSizeSection: .big,
+                        enumCardVerticalState: enumCardVerticalState
                     )
                 }
             }
@@ -34,6 +36,6 @@ struct GridView: View {
 }
 
 #Preview {
-    GridView()
+    GridView(enumCardVerticalState: .verticalOnlyPrice)
         .environmentObject(ProductViewModel())
 }

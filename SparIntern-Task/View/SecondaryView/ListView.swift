@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     @EnvironmentObject var viewModel: ProductViewModel
+    var enumCardVerticalState: EnumCardVerticalState
     
     var body: some View {
         ScrollView(.vertical) {
@@ -18,7 +19,8 @@ struct ListView: View {
                         product: product,
                         enumProductCard: .horizontalCard,
                         actionListEnable: true,
-                        enumCardImageSizeSection: .little
+                        enumCardImageSizeSection: .little,
+                        enumCardVerticalState: enumCardVerticalState
                     )
                         .padding(.bottom, 10)
                 }
@@ -28,6 +30,6 @@ struct ListView: View {
     }
 }
 #Preview {
-    ListView()
+    ListView(enumCardVerticalState: .verticalOnlyPrice)
         .environmentObject(ProductViewModel())
 }

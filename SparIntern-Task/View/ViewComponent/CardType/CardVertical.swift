@@ -8,22 +8,48 @@
 import SwiftUI
 
 struct CardVertical: View {
-    @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
-    var enumCardButtonNoActive: EnumCardButtonNoActive = .small
+    var enumPriceCardState: EnumPriceCardState = .small
     var enumCardImageSizeSection: EnumCardImageSizeSection
-    
+    var enumCardVerticalState: EnumCardVerticalState
+
     var body: some View {
         VStack {
-            CardImageSection(product: product, enumCardImageSizeSection: enumCardImageSizeSection)
-            CardInfoSection(product: product, enumCardButtonNoActive: enumCardButtonNoActive)
+            CardImageSection(
+                product: product,
+                enumCardImageSizeSection: enumCardImageSizeSection
+            )
+            CardInfoSection(
+                product: product,
+                enumCardVerticalState: enumCardVerticalState,
+                enumPriceCardState: enumPriceCardState,
+                enumProductCard: .verticalCard
+            )
+            .padding(.bottom, 4)
         }
         .overlay(alignment: .topTrailing, content: {
             CardActionList(product: product)
         })
         .background(Color.white)
-        .cornerRadius(10)
+        .cornerRadius(4)
         .shadow(color: .black.opacity(0.1), radius: 2, x: 2, y: -2)
         .shadow(color: .black.opacity(0.1), radius: 2, x: -2, y: 2)
+    }
+}
+
+#Preview {
+    VStack {
+        CardVertical(
+            product: Product(name: "сыр Ламбер 500/0 230г",
+                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+            enumCardImageSizeSection: .big,
+            enumCardVerticalState: .verticalOnlyPrice
+        )
+        CardVertical(
+            product: Product(name: "сыр Ламбер 500/0 230г",
+                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+            enumCardImageSizeSection: .small,
+            enumCardVerticalState: .verticalChangeProduct
+        )
     }
 }

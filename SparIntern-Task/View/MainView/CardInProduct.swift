@@ -10,6 +10,7 @@ import SwiftUI
 struct CardInProduct: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var cardState: Bool
+    var enumCardVerticalState: EnumCardVerticalState
     
     var body: some View {
         NavigationStack {
@@ -20,7 +21,8 @@ struct CardInProduct: View {
                             product: product,
                             enumProductCard: .horizontalCard,
                             actionListEnable: false,
-                            enumCardImageSizeSection: .little
+                            enumCardImageSizeSection: .little,
+                            enumCardVerticalState: .verticalChangeProduct
                         )
                     }
                 }
@@ -45,6 +47,9 @@ struct CardInProduct: View {
 
 
 #Preview {
-    CardInProduct(cardState: false)
+    CardInProduct(
+        cardState: false,
+        enumCardVerticalState: .verticalChangeProduct
+    )
         .environmentObject(ProductViewModel())
 }

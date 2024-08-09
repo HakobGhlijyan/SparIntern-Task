@@ -131,8 +131,8 @@
 		340B89222C66828300A826D4 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				340B89202C66828300A826D4 /* CardInProduct.swift */,
 				340B89212C66828300A826D4 /* ProductListView.swift */,
+				340B89202C66828300A826D4 /* CardInProduct.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";

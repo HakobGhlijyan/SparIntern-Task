@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct CardButtonNoActive: View {
+    @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
-    var enumCardButtonNoActive: EnumCardButtonNoActive
+    var enumPriceCardState: EnumPriceCardState
     
     var body: some View {
         HStack {
             VStack(spacing: 0.0) {
                 HStack(spacing: 0.0) {
                     Text("\(product.price, specifier: "%.1f")")
-                        .font(enumCardButtonNoActive == .long ? .system(size: 16) : .system(size: 20)).bold()
+                        .font(enumPriceCardState == .long ? .system(size: 20) : .system(size: 16)).bold()
                     Image("PerAmountIcon")
                         .resizable()
                         .frame(width: 20, height: 20)
@@ -52,9 +53,13 @@ struct CardButtonNoActive: View {
                 .frame(width: 48, height: 36)
                 .background(.primary001)
                 .clipShape(Capsule())
+                .asButton(.press) {
+                    viewModel.addProductCard(product: product)
+                }
 
         }
-        .frame(width: enumCardButtonNoActive == .long ? 160 : 199, height: 36)
+        .frame(maxWidth: .infinity)
+        .frame(height: 36)
         .padding(4)
         .background(.white)
     }
@@ -68,14 +73,15 @@ struct CardButtonNoActive: View {
             CardButtonNoActive(
                 product: Product(name: "сыр Ламбер 500/0 230г",
                                  price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
-                enumCardButtonNoActive: .long
+                enumPriceCardState: .long
             )
             //For Horizontal
             CardButtonNoActive(
                 product: Product(name: "сыр Ламбер 500/0 230г",
                                  price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
-                enumCardButtonNoActive: .small
+                enumPriceCardState: .small
             )
         }
     }
+    .environmentObject(ProductViewModel())
 }

@@ -26,7 +26,7 @@ struct RootView: View {
             .tag(1)
             
             NavigationStack {
-                CardInProduct(cardState: false)
+                CardInProduct(cardState: false, enumCardVerticalState: .verticalOnlyPrice)
                     .navigationTitle("Cards")
                     .navigationBarTitleDisplayMode(.inline)
             }

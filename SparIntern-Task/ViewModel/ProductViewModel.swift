@@ -10,13 +10,11 @@ import SwiftUI
 @MainActor
 final class ProductViewModel: ObservableObject {
     @Published var gridOrListView: Bool = true    
-    @Published var isProductFavorite: Bool = false
     @Published var cardStateAddingActive: Bool = false
-    @Published var cardIsFavorite: Bool = true
 
     @Published var products: [Product] = [
         Product(name: "сыр Ламбер 500/0 230г", 
-                price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: false),
         Product(name: "Энергетический Напит", 
                 price: 99699.90, imageName: "Image-1", rating: 4.2, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
         Product(name: "Салат Овощной с Крабовыми Палочками", 
