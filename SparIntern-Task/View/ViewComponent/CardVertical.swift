@@ -10,10 +10,12 @@ import SwiftUI
 struct CardVertical: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
+    var cardState: Bool
     
     var body: some View {
         VStack {
-            CardImageSection(product: product, imageFrameSize: 168)
+            CardImageSection(product: product, cardState: cardState)
+//            CardImageSection(product: product, imageFrameSize: cardState ? 148 : 168, cardState: cardState)
             CardInfoSection(product: product, cardState: product.cardStateAddingActive)
         }
         .overlay(alignment: .topTrailing, content: {

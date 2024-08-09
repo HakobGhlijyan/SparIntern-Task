@@ -13,7 +13,7 @@ struct CardButtonInActive: View {
     var moneyCount: Double = 12.50
     
     var body: some View {
-        HStack {
+        HStack(spacing: 0.0) {
             Button(action: {
                 print("minus")
             }, label: {
@@ -41,9 +41,10 @@ struct CardButtonInActive: View {
         }
         .foregroundStyle(.white)
         .bold()
-        .padding(.vertical, 4)
-        .frame(width: 160)
+        .frame(height: 36)
+        .frame(maxWidth: .infinity)
         .background(.primary001)
         .clipShape(RoundedCornerShape(radius: 20, corners: [.allCorners]))
+        .padding(4)
     }
 }

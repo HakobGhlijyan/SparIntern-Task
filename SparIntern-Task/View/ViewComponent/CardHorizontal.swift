@@ -11,12 +11,14 @@ struct CardHorizontal: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
     var actionListEnable: Bool
+    var cardState: Bool
     
     var body: some View {
         VStack {
             Divider()
             HStack {
-                CardImageSection(product: product, imageFrameSize: 144)
+//                CardImageSection(product: product, imageFrameSize: cardState ? 148 : 168, cardState: cardState)
+                CardImageSection(product: product, cardState: cardState)
                 CardInfoSection(product: product, cardState: product.cardStateAddingActive)
             }
         }

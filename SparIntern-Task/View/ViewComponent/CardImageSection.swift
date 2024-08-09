@@ -7,14 +7,22 @@
 
 import SwiftUI
 
+enum CardImageState {
+    case big
+    case medium
+    case little
+}
+
 struct CardImageSection: View {
     var product: Product
-    var imageFrameSize: CGFloat
+//    var imageFrameSize: CGFloat
+    var cardState: Bool
     
     var body: some View {
         Image(product.imageName)
             .resizable()
-            .frame(width: imageFrameSize, height: imageFrameSize)
+//            .frame(width: imageFrameSize, height: imageFrameSize)
+            .frame(width: cardState ? 148 : 168, height: cardState ? 148 : 168)
             .overlay(alignment: .topLeading, content: {
                 Text(product.activeCardDiscount ? "Удар по ценам" : "Новинки")
                     .font(.system(size: 10, weight: .regular, design: .default))
@@ -68,7 +76,23 @@ struct CardImageSection: View {
                     activeCardDiscount: false,
                     cardStateAddingActive: true
                 ),
-                imageFrameSize: 168
+//                imageFrameSize: 168, cardState: true
+                cardState: false
+            )
+            
+            CardImageSection(
+                product: Product(
+                    name: "сыр Ламбер 500/0 230г",
+                    price: 90.90,
+                    imageName: "Image-0",
+                    rating: 4.1,
+                    isFavorite: false,
+                    activeCardDiscount: false,
+                    cardStateAddingActive: true
+                ),
+//                imageFrameSize: 148, cardState: false
+                cardState: true
+                
             )
             
             CardImageSection(
@@ -81,8 +105,12 @@ struct CardImageSection: View {
                     activeCardDiscount: true,
                     cardStateAddingActive: true
                 ),
-                imageFrameSize: 168
+//                imageFrameSize: 144, cardState: true
+                cardState: true
             )
+            
+            
+            
         }
     }
 }

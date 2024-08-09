@@ -22,3 +22,18 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+
+/*
+ 
+ struct AddView_Previews: PreviewProvider {
+     static var previews: some View {
+         NavigationStack {
+             AddView()
+         }
+         .environmentObject(ListViewModel())
+     }
+ }
+
+ 
+ */

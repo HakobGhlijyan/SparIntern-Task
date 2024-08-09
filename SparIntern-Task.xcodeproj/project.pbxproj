@@ -28,6 +28,7 @@
 		340B893C2C66828300A826D4 /* CardInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B892C2C66828300A826D4 /* CardInfoSection.swift */; };
 		340B893D2C66828300A826D4 /* CardVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B892D2C66828300A826D4 /* CardVertical.swift */; };
 		340B893E2C66828300A826D4 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B89302C66828300A826D4 /* ProductViewModel.swift */; };
+		340B89402C66998B00A826D4 /* CardButtonInActiveVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B893F2C66998B00A826D4 /* CardButtonInActiveVolume.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		340B892C2C66828300A826D4 /* CardInfoSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfoSection.swift; sourceTree = "<group>"; };
 		340B892D2C66828300A826D4 /* CardVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardVertical.swift; sourceTree = "<group>"; };
 		340B89302C66828300A826D4 /* ProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		340B893F2C66998B00A826D4 /* CardButtonInActiveVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButtonInActiveVolume.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,13 +147,14 @@
 		340B892E2C66828300A826D4 /* ViewComponent */ = {
 			isa = PBXGroup;
 			children = (
-				340B89272C66828300A826D4 /* CardActionList.swift */,
-				340B89282C66828300A826D4 /* CardButtonInActive.swift */,
-				340B89292C66828300A826D4 /* CardButtonNoActive.swift */,
+				340B892D2C66828300A826D4 /* CardVertical.swift */,
 				340B892A2C66828300A826D4 /* CardHorizontal.swift */,
+				340B89272C66828300A826D4 /* CardActionList.swift */,
 				340B892B2C66828300A826D4 /* CardImageSection.swift */,
 				340B892C2C66828300A826D4 /* CardInfoSection.swift */,
-				340B892D2C66828300A826D4 /* CardVertical.swift */,
+				340B89282C66828300A826D4 /* CardButtonInActive.swift */,
+				340B893F2C66998B00A826D4 /* CardButtonInActiveVolume.swift */,
+				340B89292C66828300A826D4 /* CardButtonNoActive.swift */,
 			);
 			path = ViewComponent;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				340B89342C66828300A826D4 /* GridView.swift in Sources */,
 				340B891D2C66823E00A826D4 /* RoundedCornerShape.swift in Sources */,
 				340B893C2C66828300A826D4 /* CardInfoSection.swift in Sources */,
+				340B89402C66998B00A826D4 /* CardButtonInActiveVolume.swift in Sources */,
 				340B89362C66828300A826D4 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
