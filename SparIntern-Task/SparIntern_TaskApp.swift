@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct SparIntern_TaskApp: App {
+    @StateObject private var viewModel = ProductViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                RootView()
+            }
+            .environmentObject(viewModel)
         }
     }
 }
