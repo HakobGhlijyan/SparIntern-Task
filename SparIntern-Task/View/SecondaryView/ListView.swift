@@ -14,7 +14,12 @@ struct ListView: View {
         ScrollView(.vertical) {
             LazyVStack {
                 ForEach(viewModel.products) { product in
-                    ProductCard(product: product, cardState: false)
+                    ProductCard(
+                        product: product,
+                        enumProductCard: .horizontalCard,
+                        actionListEnable: true,
+                        enumCardImageSizeSection: .little
+                    )
                         .padding(.bottom, 10)
                 }
             }

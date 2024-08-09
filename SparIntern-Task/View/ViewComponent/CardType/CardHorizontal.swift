@@ -11,15 +11,15 @@ struct CardHorizontal: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
     var actionListEnable: Bool
-    var cardState: Bool
-    
+    var enumCardButtonNoActive: EnumCardButtonNoActive = .long
+    var enumCardImageSizeSection: EnumCardImageSizeSection
+
     var body: some View {
         VStack {
             Divider()
             HStack {
-//                CardImageSection(product: product, imageFrameSize: cardState ? 148 : 168, cardState: cardState)
-                CardImageSection(product: product, cardState: cardState)
-                CardInfoSection(product: product, cardState: product.cardStateAddingActive)
+                CardImageSection(product: product, enumCardImageSizeSection: enumCardImageSizeSection)
+                CardInfoSection(product: product, enumCardButtonNoActive: enumCardButtonNoActive)
             }
         }
         .overlay(alignment: .topTrailing, content: {

@@ -7,22 +7,21 @@
 
 import SwiftUI
 
-enum CardImageState {
-    case big
-    case medium
-    case little
+enum EnumCardImageSizeSection: CGFloat {
+    case big = 168
+    case small = 148
+    case little = 144
 }
+
 
 struct CardImageSection: View {
     var product: Product
-//    var imageFrameSize: CGFloat
-    var cardState: Bool
+    var enumCardImageSizeSection: EnumCardImageSizeSection
     
     var body: some View {
         Image(product.imageName)
             .resizable()
-//            .frame(width: imageFrameSize, height: imageFrameSize)
-            .frame(width: cardState ? 148 : 168, height: cardState ? 148 : 168)
+            .frame(width: enumCardImageSizeSection.rawValue, height: enumCardImageSizeSection.rawValue)
             .overlay(alignment: .topLeading, content: {
                 Text(product.activeCardDiscount ? "Удар по ценам" : "Новинки")
                     .font(.system(size: 10, weight: .regular, design: .default))
@@ -67,50 +66,20 @@ struct CardImageSection: View {
         
         VStack {
             CardImageSection(
-                product: Product(
-                    name: "сыр Ламбер 500/0 230г",
-                    price: 90.90,
-                    imageName: "Image-0",
-                    rating: 4.1,
-                    isFavorite: false,
-                    activeCardDiscount: false,
-                    cardStateAddingActive: true
-                ),
-//                imageFrameSize: 168, cardState: true
-                cardState: false
+                product: Product(name: "сыр Ламбер 500/0 230г",
+                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                enumCardImageSizeSection: .big
             )
-            
             CardImageSection(
-                product: Product(
-                    name: "сыр Ламбер 500/0 230г",
-                    price: 90.90,
-                    imageName: "Image-0",
-                    rating: 4.1,
-                    isFavorite: false,
-                    activeCardDiscount: false,
-                    cardStateAddingActive: true
-                ),
-//                imageFrameSize: 148, cardState: false
-                cardState: true
-                
+                product: Product(name: "сыр Ламбер 500/0 230г",
+                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                enumCardImageSizeSection: .small
             )
-            
             CardImageSection(
-                product: Product(
-                    name: "сыр Ламбер 500/0 230г",
-                    price: 90.90,
-                    imageName: "Image-0",
-                    rating: 4.1,
-                    isFavorite: false,
-                    activeCardDiscount: true,
-                    cardStateAddingActive: true
-                ),
-//                imageFrameSize: 144, cardState: true
-                cardState: true
+                product: Product(name: "сыр Ламбер 500/0 230г",
+                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                enumCardImageSizeSection: .little
             )
-            
-            
-            
         }
     }
 }

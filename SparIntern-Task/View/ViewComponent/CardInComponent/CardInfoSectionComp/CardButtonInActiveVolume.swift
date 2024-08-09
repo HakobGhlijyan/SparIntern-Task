@@ -39,5 +39,8 @@ struct CardButtonInActiveVolume: View {
 
 
 #Preview {
-    CardButtonInActiveVolume()
+    ZStack {
+        Color.black.opacity(0.1).ignoresSafeArea()
+        CardButtonInActiveVolume()
+    }
 }

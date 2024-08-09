@@ -10,13 +10,13 @@ import SwiftUI
 struct CardVertical: View {
     @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
-    var cardState: Bool
+    var enumCardButtonNoActive: EnumCardButtonNoActive = .small
+    var enumCardImageSizeSection: EnumCardImageSizeSection
     
     var body: some View {
         VStack {
-            CardImageSection(product: product, cardState: cardState)
-//            CardImageSection(product: product, imageFrameSize: cardState ? 148 : 168, cardState: cardState)
-            CardInfoSection(product: product, cardState: product.cardStateAddingActive)
+            CardImageSection(product: product, enumCardImageSizeSection: enumCardImageSizeSection)
+            CardInfoSection(product: product, enumCardButtonNoActive: enumCardButtonNoActive)
         }
         .overlay(alignment: .topTrailing, content: {
             CardActionList(product: product)

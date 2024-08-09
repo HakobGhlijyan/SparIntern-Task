@@ -7,17 +7,22 @@
 
 import SwiftUI
 
+enum EnumProductCard {
+    case verticalCard
+    case horizontalCard
+}
+
 struct ProductCard: View {
-    @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
-    var cardState: Bool = false
+    var enumProductCard: EnumProductCard
     var actionListEnable: Bool = true
+    var enumCardImageSizeSection: EnumCardImageSizeSection
 
     var body: some View {
-        if cardState {
-            CardVertical(product: product, cardState: cardState)
+        if enumProductCard == .verticalCard {
+            CardVertical(product: product, enumCardImageSizeSection: enumCardImageSizeSection)
         } else {
-            CardHorizontal(product: product, actionListEnable: actionListEnable, cardState: cardState)
+            CardHorizontal(product: product, actionListEnable: actionListEnable, enumCardImageSizeSection: enumCardImageSizeSection)
         }
     }
 }
@@ -28,19 +33,18 @@ struct ProductCard_Previews: PreviewProvider {
         ZStack {
             Color.black.opacity(0.1).ignoresSafeArea()
             
-            ProductCard(
-               product: Product(
-                   name: "сыр Ламбер 500/0 230г",
-                   price: 90.90,
-                   imageName: "Image-0",
-                   rating: 4.1,
-                   isFavorite: false,
-                   activeCardDiscount: false,
-                   cardStateAddingActive: true
-               ),
-               cardState: true
-            )
+            VStack {
+                ProductCard(product: Product(
+                    name: "сыр Ламбер 500/0 230г",
+                    price: 90.90,
+                    imageName: "Image-0",
+                    rating: 4.1,
+                    isFavorite: false,
+                    activeCardDiscount: false,
+                    cardStateAddingActive: true
+                ), enumProductCard: .verticalCard, enumCardImageSizeSection: .big)
+                
+            }
         }
-        .environmentObject(ProductViewModel())
     }
 }

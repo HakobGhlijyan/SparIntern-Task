@@ -29,6 +29,7 @@
 		340B893D2C66828300A826D4 /* CardVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B892D2C66828300A826D4 /* CardVertical.swift */; };
 		340B893E2C66828300A826D4 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B89302C66828300A826D4 /* ProductViewModel.swift */; };
 		340B89402C66998B00A826D4 /* CardButtonInActiveVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B893F2C66998B00A826D4 /* CardButtonInActiveVolume.swift */; };
+		34C84C4A2C66A89B00426B19 /* EnumStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C84C492C66A89B00426B19 /* EnumStates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		340B892D2C66828300A826D4 /* CardVertical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardVertical.swift; sourceTree = "<group>"; };
 		340B89302C66828300A826D4 /* ProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		340B893F2C66998B00A826D4 /* CardButtonInActiveVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButtonInActiveVolume.swift; sourceTree = "<group>"; };
+		34C84C492C66A89B00426B19 /* EnumStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumStates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				340B89162C66823E00A826D4 /* Product.swift */,
+				34C84C492C66A89B00426B19 /* EnumStates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,14 +150,8 @@
 		340B892E2C66828300A826D4 /* ViewComponent */ = {
 			isa = PBXGroup;
 			children = (
-				340B892D2C66828300A826D4 /* CardVertical.swift */,
-				340B892A2C66828300A826D4 /* CardHorizontal.swift */,
-				340B89272C66828300A826D4 /* CardActionList.swift */,
-				340B892B2C66828300A826D4 /* CardImageSection.swift */,
-				340B892C2C66828300A826D4 /* CardInfoSection.swift */,
-				340B89282C66828300A826D4 /* CardButtonInActive.swift */,
-				340B893F2C66998B00A826D4 /* CardButtonInActiveVolume.swift */,
-				340B89292C66828300A826D4 /* CardButtonNoActive.swift */,
+				34C84C4B2C66A8E500426B19 /* CardType */,
+				34C84C4C2C66A8F300426B19 /* CardInComponent */,
 			);
 			path = ViewComponent;
 			sourceTree = "<group>";
@@ -175,6 +172,36 @@
 				340B89302C66828300A826D4 /* ProductViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34C84C4B2C66A8E500426B19 /* CardType */ = {
+			isa = PBXGroup;
+			children = (
+				340B892D2C66828300A826D4 /* CardVertical.swift */,
+				340B892A2C66828300A826D4 /* CardHorizontal.swift */,
+			);
+			path = CardType;
+			sourceTree = "<group>";
+		};
+		34C84C4C2C66A8F300426B19 /* CardInComponent */ = {
+			isa = PBXGroup;
+			children = (
+				340B89272C66828300A826D4 /* CardActionList.swift */,
+				340B892B2C66828300A826D4 /* CardImageSection.swift */,
+				340B892C2C66828300A826D4 /* CardInfoSection.swift */,
+				34C84C4D2C66AED800426B19 /* CardInfoSectionComp */,
+			);
+			path = CardInComponent;
+			sourceTree = "<group>";
+		};
+		34C84C4D2C66AED800426B19 /* CardInfoSectionComp */ = {
+			isa = PBXGroup;
+			children = (
+				340B89282C66828300A826D4 /* CardButtonInActive.swift */,
+				340B893F2C66998B00A826D4 /* CardButtonInActiveVolume.swift */,
+				340B89292C66828300A826D4 /* CardButtonNoActive.swift */,
+			);
+			path = CardInfoSectionComp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +278,7 @@
 				340B893D2C66828300A826D4 /* CardVertical.swift in Sources */,
 				340B890B2C66816200A826D4 /* ContentView.swift in Sources */,
 				340B89392C66828300A826D4 /* CardButtonNoActive.swift in Sources */,
+				34C84C4A2C66A89B00426B19 /* EnumStates.swift in Sources */,
 				340B893B2C66828300A826D4 /* CardImageSection.swift in Sources */,
 				340B893E2C66828300A826D4 /* ProductViewModel.swift in Sources */,
 				340B893A2C66828300A826D4 /* CardHorizontal.swift in Sources */,

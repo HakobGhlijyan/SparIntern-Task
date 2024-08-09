@@ -19,7 +19,12 @@ struct GridView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(viewModel.products) { product in
-                    ProductCard(product: product, cardState: true)
+                    ProductCard(
+                        product: product,
+                        enumProductCard: .verticalCard,
+                        actionListEnable: true,
+                        enumCardImageSizeSection: .big
+                    )
                 }
             }
             .padding(4)

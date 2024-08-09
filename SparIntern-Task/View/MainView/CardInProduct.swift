@@ -16,7 +16,12 @@ struct CardInProduct: View {
             ScrollView {
                 LazyVStack {
                     ForEach(viewModel.inCardProducts) { product in
-                        ProductCard(product: product, cardState: cardState, actionListEnable: false)
+                        ProductCard(
+                            product: product,
+                            enumProductCard: .horizontalCard,
+                            actionListEnable: false,
+                            enumCardImageSizeSection: .little
+                        )
                     }
                 }
             }

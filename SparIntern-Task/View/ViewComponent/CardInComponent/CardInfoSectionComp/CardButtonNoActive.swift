@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct CardButtonNoActive: View {
-    @EnvironmentObject var viewModel: ProductViewModel
     var product: Product
-    var cardStateSize: Bool
+    var enumCardButtonNoActive: EnumCardButtonNoActive
     
     var body: some View {
         HStack {
             VStack(spacing: 0.0) {
                 HStack(spacing: 0.0) {
                     Text("\(product.price, specifier: "%.1f")")
-                        .font(cardStateSize ? .system(size: 16) : .system(size: 20)).bold()
+                        .font(enumCardButtonNoActive == .long ? .system(size: 16) : .system(size: 20)).bold()
                     Image("PerAmountIcon")
                         .resizable()
                         .frame(width: 20, height: 20)
@@ -31,7 +30,6 @@ struct CardButtonNoActive: View {
                     Rectangle()
                         .frame(width: 30, height: 1)
                     Text("199,0")
-                        .font(cardStateSize ? .caption2 : .subheadline)
                         .font(.system(size: 12))
                 }
                 .foregroundStyle(.gray)
@@ -56,8 +54,28 @@ struct CardButtonNoActive: View {
                 .clipShape(Capsule())
 
         }
-        .frame(width: 160, height: 36)
+        .frame(width: enumCardButtonNoActive == .long ? 160 : 199, height: 36)
         .padding(4)
         .background(.white)
+    }
+}
+
+#Preview {
+    ZStack {
+        Color.black.opacity(0.1).ignoresSafeArea()
+        VStack {
+            //For Vertical
+            CardButtonNoActive(
+                product: Product(name: "сыр Ламбер 500/0 230г",
+                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                enumCardButtonNoActive: .long
+            )
+            //For Horizontal
+            CardButtonNoActive(
+                product: Product(name: "сыр Ламбер 500/0 230г",
+                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                enumCardButtonNoActive: .small
+            )
+        }
     }
 }
