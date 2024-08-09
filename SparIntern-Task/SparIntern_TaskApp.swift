@@ -13,9 +13,7 @@ struct SparIntern_TaskApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                RootView()
-            }
+            RootView()
             .environmentObject(viewModel)
         }
     }

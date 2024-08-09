@@ -15,7 +15,6 @@ struct RootView: View {
             NavigationStack {
                 ProductListView()
                     .navigationTitle("Products")
-                    .navigationBarTitleDisplayMode(.inline)
             }
             .tabItem {
                 Label(
@@ -28,7 +27,6 @@ struct RootView: View {
             NavigationStack {
                 CardInProduct(cardState: false, enumCardVerticalState: .verticalOnlyPrice)
                     .navigationTitle("Cards")
-                    .navigationBarTitleDisplayMode(.inline)
             }
             .tabItem {
                 Label(
