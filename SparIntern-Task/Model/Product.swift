@@ -15,9 +15,8 @@ struct Product: Identifiable, Hashable {
     var rating: Double
     var isFavorite: Bool
     var activeCardDiscount: Bool
-    var cardStateAddingActive: Bool  // toogle price or adding card -> CardButtonInActive, CardButtonInActiveVolume OR CardButtonNoActive
     
-    init(id: UUID = UUID(), name: String, price: Double, imageName: String, rating: Double, isFavorite: Bool, activeCardDiscount: Bool, cardStateAddingActive: Bool) {
+    init(id: UUID = UUID(), name: String, price: Double, imageName: String, rating: Double, isFavorite: Bool, activeCardDiscount: Bool) {
         self.id = id
         self.name = name
         self.price = price
@@ -25,7 +24,6 @@ struct Product: Identifiable, Hashable {
         self.rating = rating
         self.isFavorite = isFavorite
         self.activeCardDiscount = activeCardDiscount
-        self.cardStateAddingActive = cardStateAddingActive
     }
     
 }

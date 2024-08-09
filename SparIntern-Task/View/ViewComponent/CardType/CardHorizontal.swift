@@ -45,28 +45,28 @@ struct CardHorizontal: View {
     VStack {
         CardHorizontal(
             product: Product(name: "сыр Ламбер 500/0 230г",
-                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false),
             actionListEnable: true,
             enumCardImageSizeSection: .little,
             enumCardVerticalState: .verticalOnlyPrice
         )
         CardHorizontal(
             product: Product(name: "сыр Ламбер 500/0 230г",
-                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false),
             actionListEnable: false,
             enumCardImageSizeSection: .small,
             enumCardVerticalState: .verticalOnlyPrice
         )
         CardHorizontal(
             product: Product(name: "сыр Ламбер 500/0 230г",
-                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false),
             actionListEnable: true,
             enumCardImageSizeSection: .little,
             enumCardVerticalState: .verticalChangeProduct
         )
         CardHorizontal(
             product: Product(name: "сыр Ламбер 500/0 230г",
-                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false),
             actionListEnable: true,
             enumCardImageSizeSection: .small,
             enumCardVerticalState: .verticalChangeProduct

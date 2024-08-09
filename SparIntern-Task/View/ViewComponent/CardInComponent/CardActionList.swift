@@ -14,7 +14,7 @@ struct CardActionList: View {
     var body: some View {
         VStack(alignment: .trailing, spacing: 0.0) {
             Button(action: {
-                viewModel.toggleCardState(for: product)
+                    //Action
                 print("Change Active state")
             }, label: {
                 Image(systemName: "list.bullet.clipboard")
@@ -42,6 +42,6 @@ struct CardActionList: View {
 }
 
 #Preview {
-    CardActionList(product: Product(name: "сыр Ламбер 500/0 230г", price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: true, cardStateAddingActive: true))
+    CardActionList(product: Product(name: "сыр Ламбер 500/0 230г", price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: true))
         .environmentObject(ProductViewModel())
 }

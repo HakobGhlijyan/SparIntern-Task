@@ -54,7 +54,7 @@ struct CardButtonInActive: View {
         Color.black.opacity(0.1).ignoresSafeArea()
         CardButtonInActive(
             product: Product(name: "сыр Ламбер 500/0 230г",
-                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                             price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false),
             kgCount: 0,
             moneyCount: 12.5
         )

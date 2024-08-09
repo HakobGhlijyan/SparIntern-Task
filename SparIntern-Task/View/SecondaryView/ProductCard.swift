@@ -47,8 +47,7 @@ struct ProductCard: View {
                     imageName: "Image-0",
                     rating: 4.1,
                     isFavorite: false,
-                    activeCardDiscount: false,
-                    cardStateAddingActive: true
+                    activeCardDiscount: false
                 ),
                 enumProductCard: .verticalCard,
                 enumCardImageSizeSection: .big,
@@ -61,8 +60,7 @@ struct ProductCard: View {
                     imageName: "Image-0",
                     rating: 4.1,
                     isFavorite: false,
-                    activeCardDiscount: false,
-                    cardStateAddingActive: true
+                    activeCardDiscount: false
                 ),
                 enumProductCard: .horizontalCard,
                 enumCardImageSizeSection: .big,

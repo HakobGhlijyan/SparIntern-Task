@@ -72,13 +72,13 @@ struct CardButtonNoActive: View {
             //For Vertical
             CardButtonNoActive(
                 product: Product(name: "сыр Ламбер 500/0 230г",
-                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false),
                 enumPriceCardState: .long
             )
             //For Horizontal
             CardButtonNoActive(
                 product: Product(name: "сыр Ламбер 500/0 230г",
-                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false, cardStateAddingActive: true),
+                                 price: 90.90, imageName: "Image-0", rating: 4.1, isFavorite: false, activeCardDiscount: false),
                 enumPriceCardState: .small
             )
         }

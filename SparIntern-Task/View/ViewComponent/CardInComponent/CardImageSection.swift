@@ -75,8 +75,7 @@ struct CardImageSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: true,
-                        cardStateAddingActive: true
+                        activeCardDiscount: true
                     ),
                     enumCardImageSizeSection: .big,
                     activeCardDiscount: true
@@ -88,8 +87,7 @@ struct CardImageSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: true,
-                        cardStateAddingActive: true
+                        activeCardDiscount: true
                     ),
                     enumCardImageSizeSection: .small,
                     activeCardDiscount: false
@@ -101,8 +99,7 @@ struct CardImageSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: true,
-                        cardStateAddingActive: true
+                        activeCardDiscount: true
                     ),
                     enumCardImageSizeSection: .little,
                     activeCardDiscount: true
@@ -116,8 +113,7 @@ struct CardImageSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: false,
-                        cardStateAddingActive: true
+                        activeCardDiscount: false
                     ),
                     enumCardImageSizeSection: .big,
                     activeCardDiscount: true
@@ -129,8 +125,7 @@ struct CardImageSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: false,
-                        cardStateAddingActive: true
+                        activeCardDiscount: false
                     ),
                     enumCardImageSizeSection: .small,
                     activeCardDiscount: false
@@ -142,8 +137,7 @@ struct CardImageSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: false,
-                        cardStateAddingActive: true
+                        activeCardDiscount: false
                     ),
                     enumCardImageSizeSection: .little,
                     activeCardDiscount: true

@@ -73,8 +73,7 @@ struct CardInfoSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: false,
-                        cardStateAddingActive: true
+                        activeCardDiscount: false
                     ),
                     enumCardVerticalState: .verticalOnlyPrice,
                     enumPriceCardState: .long,
@@ -88,8 +87,7 @@ struct CardInfoSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: false,
-                        cardStateAddingActive: true
+                        activeCardDiscount: false
                     ),
                     enumCardVerticalState: .verticalChangeProduct,
                     enumPriceCardState: .long,
@@ -106,8 +104,7 @@ struct CardInfoSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: false,
-                        cardStateAddingActive: true
+                        activeCardDiscount: false
                     ),
                     enumCardVerticalState: .verticalOnlyPrice,
                     enumPriceCardState: .small,
@@ -121,8 +118,7 @@ struct CardInfoSection: View {
                         imageName: "Image-0",
                         rating: 4.1,
                         isFavorite: false,
-                        activeCardDiscount: false,
-                        cardStateAddingActive: true
+                        activeCardDiscount: false
                     ),
                     enumCardVerticalState: .verticalChangeProduct,
                     enumPriceCardState: .small,
