@@ -9,14 +9,14 @@ import SwiftUI
 
 struct CardInfoSection: View {
     var product: Product
-    var enumCardVerticalState: EnumCardVerticalState
+    var enumCardVerticalState: EnumCardVerticalState //!!!!
     var enumPriceCardState: EnumPriceCardState
     var enumProductCard: EnumProductCard
     
     var body: some View {
         VStack {
             Text(product.name)
-                .padding(enumCardVerticalState == .verticalOnlyPrice ? 8 : 6)
+                .padding(6)
                 .font(.system(size: 12))
                 .fontWeight(.light)
                 .lineLimit(2)
